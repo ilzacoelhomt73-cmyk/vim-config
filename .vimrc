@@ -55,6 +55,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'fatih/vim-go', {'tag': '*'}
 
 call plug#end()
+let g:AutoPairsMapCR = 0
 
 " ==========================================
 "              TEMA DESERT
@@ -79,7 +80,7 @@ highlight CursorLineNr ctermfg=grey guifg=#808080
 "              COC.NVIM
 " ==========================================
 
-set completeopt=menuone,noinsert,noselect
+set completeopt=menuone,noinsert
 
 " Ir para definição
 nmap gd <Plug>(coc-definition)
@@ -104,8 +105,7 @@ nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>f <Plug>(coc-format)
 
 " Aceitar autocomplete com Enter
-inoremap <expr> <CR> pumvisible() ? coc#_select_confirm() : "\<CR>"
-
+inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 " ==========================================
 "              NERDTREE
 " ==========================================
@@ -128,4 +128,5 @@ filetype plugin indent on
 " ==========================================
 "              FINAL
 " ==========================================
+
 
