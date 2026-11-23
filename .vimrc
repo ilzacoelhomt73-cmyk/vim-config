@@ -31,6 +31,9 @@ call plug#begin('~/.vim/plugged')
 
 " Tema
 Plug 'junegunn/seoul256.vim'
+" auto-pairs
+
+Plug 'jiangmiao/auto-pairs'
 
 " Alinhamento
 Plug 'junegunn/vim-easy-align'
@@ -58,7 +61,7 @@ call plug#end()
 " ==========================================
 
 set background=dark
-colorscheme desert
+colorscheme catppuccin_mocha
 
 " ==========================================
 "              CORES
